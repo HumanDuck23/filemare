@@ -127,7 +127,7 @@ def get_input():
     time.sleep(20)
 
     with open(input_path, "r") as f:
-        data = f.read()
+        data = f.read().strip()
         try:
             num = int(data)
             create_files(num)
@@ -174,7 +174,7 @@ def get_file_data(path):
     Returns the data inside the given file.
     """
     with open(path, "r") as f:
-        return f.read()
+        return f.read().strip()
 
 
 def eval_ins(instruction, data):
