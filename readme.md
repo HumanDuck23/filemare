@@ -62,7 +62,7 @@ And these are the directory-based instructions available to you:
 
 | Instruction | Description |
 | --- | --- |
-| LOOP_\<itercount> | Runs the instructions inside that directory `itercount` times. |
+| LOOP_\<itercount>_\<something> | Runs the instructions inside that directory `itercount` times. `something` is anything you want to add to the directory name to make it unique. |
 | FUNCTION_\<name> | Creates a function with the specified name. Function arguments are not a thing, so you'll need to know what pieces of data your function requires and make sure to write them *before* calling the function! |
 
 ## Running FileMare
@@ -70,7 +70,11 @@ And these are the directory-based instructions available to you:
 In order to run **FileMare** (why do you want to do that??), simply download the python code from here and run it with `python3 filemare.py <program_dir>`.
 
 ### Disclaimers
-Some disclaimers: as you are literally working with code that deletes and creates files on your system, be careful with this power, as you can (probably?) mess and up ruin things you don't want to ruin. The python program running your code is changing directories as you say to create and read data. Good luck and have fun using **FileMare**!
+Some disclaimers: as you are literally working with code that deletes and creates files on your system, be careful with this power, as you can (probably?) mess and up ruin things you don't want to ruin. The python program running your code is changing directories as you say to create and read data.
+
+Also, do not create your files from the terminal using `echo`, as it inserts some random start byte and you'll constantly
+be encountering the error `You're calling a function that doesn't exist, wtf.`. Save yourself the headache and use a text
+editor from the get-go. Good luck and have fun using **FileMare**!
 
 ### Reserved Words
 Do not use these words in your file / directory names:
